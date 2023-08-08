@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>beginner math</title>
 </head>
 <body>
+    <h1 id="title">first step adding</h1>
     <section id="text">
         <button id="startBtn">START</button>
         <button id="resultBtn">RESULT</button>
@@ -38,6 +40,8 @@
                 secondStars += '&#9733';
                 document.getElementById('secondStars').innerHTML = secondStars;
             }
+            //set result text content to empty
+            document.getElementById('result').textContent = '';
         }
         document.getElementById('startBtn').addEventListener('click', handleStart);
         //result

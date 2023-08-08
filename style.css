@@ -1,0 +1,34 @@
+body{
+    padding: 20px;
+}
+
+#title {
+    text-align: center;
+    color:aqua;
+}
+
+section {
+    text-align: center;
+    font-size: xx-large;
+}
+
+#text {
+    margin-top: 50px;
+}
+
+button {
+    font-size: xx-large;
+    display: inline-block;
+    margin-right:20px;
+    margin-left: 20px;
+}
+
+#shapes{
+    font-size: xxx-large;
+}
+#firstStars{
+    color: green;
+}
+#secondStars {
+    color: red;
+}
