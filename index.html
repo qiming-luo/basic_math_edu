@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>beginner math</title>
+</head>
+<body>
+    <section id="text">
+        <button id="startBtn">START</button>
+        <button id="resultBtn">RESULT</button>
+        <h1><span id="first"></span> + <span id="second"></span> = <span id="result"></span></h1>
+    </section>
+    <!-- shapes -->
+    <section id="shapes">
+        <h1 id="firstStars"></h1>
+        <h1 id="secondStars"></h1>
+    </section>
+    
+    <script>
+        // &#9733 == start
+        // start
+        function handleStart(){
+            firstNum = Math.floor(Math.random()*10); //pick 0-9 randomly
+            secondNum = Math.floor(Math.random()*10); //pick 0-9 randomly
+            document.getElementById('first').textContent = firstNum;
+            document.getElementById('second').textContent = secondNum;
+            // add stars
+            // first
+            let firstStarts = '';
+            for(let i=1; i<=firstNum; i++){
+                firstStarts += '&#9733';
+            }
+            document.getElementById('firstStars').innerHTML = firstStarts;
+            //second
+            let secondStars = '';
+            for(let j=1; j<=secondNum; j++){
+                secondStars += '&#9733';
+                document.getElementById('secondStars').innerHTML = secondStars;
+            }
+        }
+        document.getElementById('startBtn').addEventListener('click', handleStart);
+        //result
+        document.getElementById('resultBtn').addEventListener('click', function(){
+            const result = Number(document.getElementById('first').textContent) + Number(document.getElementById('second').textContent);
+            document.getElementById('result').textContent = result;
+        })
+    </script>
+</body>
+</html>
